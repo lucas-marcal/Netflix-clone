@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Martel Sans', sans-serif;
+    background-color: #141414;
+    color: white;
+}
+
+header {
+    padding-bottom: 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0) 100%); 
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+
+h4 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    margin: 0 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color .5s ease;
+    z-index: 8;
+}
+
+.sticky {
+    background: rgba(20, 20, 20, 0.75)
+}
+
+.sticky + .content {
+    padding-top: 60px;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
+    z-index: 8;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-right: 20px;
+}
+
+.menu-link {
+    color: white;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.menu-link:hover {
+    color: rgb(184, 184, 184);
+}
+
+.menu-link.active {
+    color: rgb(104, 195, 255);
+}
+
+
+.navbar img {
+    min-width: 100px;
+}
+
+.navbar img {
+    max-width: 8%;
+}
+
+.banner-wrapper {
+    position: relative;
+    margin-top: -5%;
+}
+
+.meta-banner .container{
+    display: flex;
+}
+
+.meta-banner {
+    margin-top: 5vw;
+    padding: 20vw auto;
+}
+
+.meta-banner h4 {
+    font-size: 2.8vw;
+    line-height: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 1.5vw 0;
+}
+
+.meta-contents {
+    padding: 8vw;
+    padding-right: 30vw;
+}
+
+.sinopse {
+    font-size: 1.8vw;
+    line-height: normal;
+}
+
+.banner-destaque {
+    position: absolute;
+    top: 0;
+    height: 400px;
+    width: 100%;
+    height: 56.25vw;
+    z-index: -1;
+}
+
+.img-destaque {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+}
+
+.banner-vignette {
+    position: absolute;
+    top: 0;
+    /* right: 25%; */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(77deg,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 85%);
+    z-index: -1;
+}
+
+.banner-vignette-baixo {
+    background-image: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+}
+
+.img-titulo-container {
+    width: 8rem;
+}
+
+.meta-img {
+    width: 100%;
+    height: auto;
+}
+
+.botoes {
+    margin-top: 15px;
+}
+
+.primary-btn {
+    font-size: 1.5vw;
+    padding: 1vw 1.8vw;
+    margin-right: 1vw;
+    border-radius: 5px;
+    border-width: 0;
+
+}
+
+.primary-btn:hover {
+    cursor: pointer;
+}
+
+.btn-play:hover {
+    background-color: rgba(255, 255, 255, 0.63);
+}
+
+.btn-moreInfo {
+    background-color: rgba(255, 255, 255, 0.301);
+    color: white;
+}
+
+.btn-moreInfo:hover {
+    background-color: rgba(255, 255, 255, 0.178);
+}
+
+.carrossel-filmes {
+    margin: 0 2.5vw;
+}
+
+.titulo-sessao {
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin-bottom: 0.2vw;
+    margin-left: 3vw;
+}
+
+.titulo-sessao a{
+    display: inline-flex;
+    align-items: center;
+}
+
+.titulo-sessao a::after {
+    content: "ver mais";
+    font-size: 1.8vw;
+    font-weight: lighter;
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.473);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.titulo-sessao a:hover::after {
+    opacity: 1;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+}
+
+.fas {
+    margin-right: 8px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.4rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+footer {
+    max-width: 980px;
+    margin: 20px auto 0;
+    padding: 3% 6%;
+    color: grey;
+}
+
+.footer-links {
+    display: flex;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    flex: 0 0 50%;
+    margin-bottom: 16px;
+}
+
+.footer-link a:hover {
+    color: rgb(158, 158, 158);
+}
+
+.social-links {
+    display: flex;
+    margin-bottom: .2em;
+    font-size: 2.5vw;
+}
+
+.social-links i {
+    margin-right: 1.5vw;
+}
+
+.social-links i:hover {
+    color: rgb(158, 158, 158);
+}
+
+@media only screen and (max-width: 768px) {
+
+    .meta-contents {
+        padding: 8vw;;
+    }
+
+    .meta-banner h4 {
+        font-size: 24px;
+    }
+
+    .sinopse {
+        font-size: 16px;
+    }
+
+    .titulo-sessao {
+        font-size: 24px;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+        padding: 10px 18px;
+        margin-right: 1vw;
+        border-radius: 5px;
+        border-width: 0;
+        margin-bottom: 10px;
+    }
+
+    .social-links {
+        justify-content: center;
+        font-size: 32px;
+    }
+
+    .social-links i {
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 4rem;
+        right: 1rem;
+        display: none;
+        text-align: right;
+        background-color: rgba(22, 22, 22, 0.801);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        align-items: right;
+    }
+
+    .navbar nav ul li {
+        margin-right: 0px;
+        font-size: 1.5rem;
+    }
+
+}
