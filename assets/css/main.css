@@ -121,7 +121,7 @@ header {
 }
 
 .meta-contents {
-    padding: 8vw;
+    padding: 12vw 8vw 8vw;
     padding-right: 30vw;
 }
 
@@ -172,7 +172,7 @@ header {
 }
 
 .meta-img {
-    width: 100%;
+    width: 14vw;
     height: auto;
 }
 
@@ -306,7 +306,7 @@ footer {
 @media only screen and (max-width: 768px) {
 
     .meta-contents {
-        padding: 8vw;;
+        padding: 16vw 8vw 8vw 8vw;;
     }
 
     .meta-banner h4 {
@@ -340,7 +340,16 @@ footer {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
+
+    .meta-contents {
+        padding: 19vw 8vw 8vw 8vw;;
+    }
+
+    .meta-img {
+        width: 100%;
+        height: auto;
+    }
 
     .toggle-button {
         display: flex;
@@ -352,7 +361,7 @@ footer {
         right: 1rem;
         display: none;
         text-align: right;
-        background-color: rgba(22, 22, 22, 0.801);
+        background-color: rgba(22, 22, 22, 0.979);
         padding: 1rem;
         border-radius: 10px;
     }
